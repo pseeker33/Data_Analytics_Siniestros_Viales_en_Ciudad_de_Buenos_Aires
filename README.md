@@ -20,11 +20,9 @@
 2. **[Objetivo y Alcance](#2-objetivo-y-alcance-del-proyecto)**
 3. **[Estructura del Repositorio](#3-estructura-del-repositorio)**
 4. **[Tech Stack](#4-stack-tecnologico-utilizado)**
-5. **[Implementaciones Realizadas](#5-implementaciones-realizadas)**
+5. **[Flujo de Trabajo](#5-flujo-de-trabajo)**
 6. **[Cierre](#6-gracias-por-su-atencion)**
 
-
-#
 <br>
 
 ## 1. Introducción 
@@ -66,6 +64,10 @@ Entonces nuestro objetivo es el de, a partir de dicha fuente de datos, y aplican
 
 <br>
 
+<span style="float:right;">[arriba](#tabla-de-contenido)</span> 
+
+<br>
+
 ## 3. **Estructura del Repositorio**
 
 <br>
@@ -79,7 +81,7 @@ El repositorio contiene los siguientes elementos:
 
 **`Carpeta 'notebooks'.-`** contiene todas las implementaciones realizadas   
 * **`'data_cleaning.ipynb'`**: implementación de la limpieza de los datos.
-* **`'data_transformation.ipynb'`**: implementación de la implementacion de las modificaciones hechas en el dataframe.
+* **`'data_transformation.ipynb'`**: implementacion de las modificaciones hechas en el dataframe.
 * **`'EDA.ipynb'`**: implementación del analisis exploratorio de datos.
 
 **`Carpeta 'data'`**: Contiene el dataset crudo mas los dataframes creados a apartir de las implementaciones ya mencionadas.
@@ -106,52 +108,33 @@ El repositorio contiene los siguientes elementos:
    ![Static Badge](https://img.shields.io/badge/POWER%20BI-%23F2C811?style=plastic&logo=powerbi&logoColor=%23F2C811&labelColor=%235C5C5C)
 
 
-## 5. **Implementaciones Realizadas** 
+## 5. **Flujo de Trabajo**
 
-### Data Cleaning
+Para completar el proyecto se dividio el trabajo en tres fases sucesivas: 
 
-Se realizaron tareas de importacion de librerias, carga del dataset  
-Se realizaron analisis sobre todas las variables significativas   
-Se confecciono un informe escrito sobre los resultados obtenidos en la etapa de analisis  
+### 1. Data Preparation
+Se preparó el dataset crudo de tal forma que pueda ser analizado sin inconvenientes. Para esto se aplicaron tareas de data cleaning como aplicar filtros, eliminar duplicados, corregir errores. Luego de la limpieza de datos se realizaron tareas básicas de data transformation para convertir el dataset a un formato fácilmente analizable. Dichas tareasincluten la normalizacion de tipos de datos, la eliminacion de campos innecesarios
 
-<span style="float:right;">[arriba](#tabla-de-contenido)</span> 
-
-<br>
-
-### Data Transformation
-
-Se realizaron tareas de importacion de librerias, carga del dataset  
-Se realizaron analisis sobre todas las variables significativas   
-Se confecciono un informe escrito sobre los resultados obtenidos en la etapa de analisis  
-
-<span style="float:right;">[arriba](#tabla-de-contenido)</span> 
-
-<br>
-
-### Analisis Exploratorio de Datos
-
-Se realizaron tareas de importacion de librerias, carga del dataset  
-
-Se realizaron analisis sobre todas las variables significativas de los siguientes datasets:  
-* `'internet_fijo_penetracion_por_provincia_100_hogares_trimestral.csv':`  
-
-Se confecciono un informe escrito sobre los resultados obtenidos en la etapa de analisis  
+### 2. Análisis Exploratorio de Datos (EDA)
+Con la data debidamente preparada, se realizó un análisis sobre todas las variables significativas para encontrar tendencias y patrones relevantes. A partir de estos insights se extrajeron la conclusiones y recomendaciones pertinentes. 
+Se confeccionó un informe escrito sobre los resultados obtenidos, tanto en formato pdf como md.  
 
 A continuacion se muestra la organizacion general del EDA (archivo `'./src/eda.png'`)
 
-<span style="float:right;">[arriba](#tabla-de-contenido)</span> 
+### 3. Dashboard
+En base a los resultados obtenidos en el analisis exploratorio de datos se elaboro un reporte interactivo con indicadores claves de desempeño  
 
-<br>
-
-### Indicadores Clave de Rendimiento
-
-A continuación se presentan los 8 KPIs propuestos y sus métricas asociadas:
+A continuación se presentan los KPIs propuestos y sus métricas asociadas:
 
 KPI 1: Aumentar las reseñas de usuarios nuevos en un 10% con respecto al año anterior  
 KPI 2: Aumentar la cantidad de restaurantes nuevos reseñados en un 5% con respecto al año anterior  
 KPI 3: Aumentar la cantidad de reseñas por restaurante en un 10% anual con respecto al año anterior  
 KPI 5: Aumentar el promedio de calificaciones de los restaurantes en un 5% con respecto al año anterior  
-KPI 6: Reducir en un 10% la cantidad de restaurantes de los que obtuvo reseñas negativas con respecto al año anterior  
+KPI 6: Reducir en un 10% la cantidad de restaurantes de los que obtuvo reseñas negativas con respecto al año anterior
+
+Obs: Al inicio en todos los notebooks se debieron importar las librerias y cargar el(los) dataset(s) correspondiente(s).
+
+<br>
 
 <span style="float:right;">[arriba](#tabla-de-contenido)</span> 
 
