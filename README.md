@@ -62,8 +62,6 @@ Para ello, nos disponibilizan un dataset sobre homicidios en siniestros viales a
 
 Entonces nuestro objetivo es el de, a partir de dicha fuente de datos, y aplicando técnicas de preparacion, análisis y visualización interactiva de datos, generar y brindar a la OMSV de informacion significativa junto con las recomendaciones para cada caso, para ser usada como `una herramienta adicional de apoyo en la toma de decisiones` de las autoridades locales encargadas de adoptar las medidas necesarias para disminuir la cantidad de víctimas fatales en siniestros viales.
 
-<br>
-
 <span style="float:right;">[arriba](#tabla-de-contenido)</span> 
 
 <br>
@@ -79,20 +77,19 @@ Entonces nuestro objetivo es el de, a partir de dicha fuente de datos, y aplican
 
 El repositorio contiene los siguientes elementos:  
 
-**`Carpeta 'notebooks'.-`** contiene todas las implementaciones realizadas   
-* **`'data_cleaning.ipynb'`**: implementación de la limpieza de los datos.
-* **`'data_transformation.ipynb'`**: implementacion de las modificaciones hechas en el dataframe.
+**`Carpeta 'notebooks'.-`** contiene los notebooks que implementan el flujo de trabajo:  
+* **`'data_preparation.ipynb'`**: implementación de la preparacion de los datos crudos.
 * **`'EDA.ipynb'`**: implementación del analisis exploratorio de datos.
 
-**`Carpeta 'data'`**: Contiene el dataset crudo mas los dataframes creados a apartir de las implementaciones ya mencionadas.
+**`Carpeta 'entregables'`**: contiene los productos finales para el uso del cliente.
+* **`'dashboard.pbix'`**: reporte interactivo con los KPIs formulados mas otras metricas y graficos relacionados
+* **`'reporte.pdf'`**: reporte con los hallazgos del trabajo
 
-**`Archivo 'dashboard.pbix'`**: Contiene un archivo en formato öwer Bi del dashboard implementado.
+**`Carpeta 'data'`**: contiene el dataset crudo mas los dataframes creados a apartir de las implementaciones ya mencionadas.
 
-**`Archivo 'ReadMe.md`**: El archivo actual.
+**`Archivo 'ReadMe.md`**: el archivo actual.
 
-**`'Carpeta src'`**: Carpeta fuente del archivo actual.
-
-<br>
+**`'Carpeta src'`**: carpeta fuente del archivo actual.
 
 <span style="float:right;">[arriba](#tabla-de-contenido)</span> 
 
@@ -110,38 +107,61 @@ El repositorio contiene los siguientes elementos:
 
 ## 5. **Flujo de Trabajo**
 
-Para completar el proyecto se dividio el trabajo en tres fases sucesivas: 
+Para completar el proyecto se dividio el trabajo en tres etapas sucesivas: 
 
 ### 1. Data Preparation
-Se preparó el dataset crudo de tal forma que pueda ser analizado sin inconvenientes. Para esto se aplicaron tareas de data cleaning como aplicar filtros, eliminar duplicados, corregir errores. Luego de la limpieza de datos se realizaron tareas básicas de data transformation para convertir el dataset a un formato fácilmente analizable. Dichas tareasincluten la normalizacion de tipos de datos, la eliminacion de campos innecesarios
+En esta primera etapa se preparó el dataset crudo de tal forma que en la etapa posterior pueda ser analizado sin inconvenientes. Para esto se aplicaron tareas de data cleaning como aplicar filtros, eliminar duplicados, corregir errores. Luego de la limpieza de datos se realizaron tareas básicas de data transformation para convertir el dataset a un formato fácilmente analizable. Dichas tareas incluyeron la normalizacion de tipos de datos y la eliminacion de campos innecesarios. 
+Esta etapa se implementó en el notebook [1_data_preparation.ipynb](etapas/1_data_preparation.ipynb).  
+A continuacion se muestra la organizacion general de las tareas: 
+
+<p align="left">  
+    <img src="./src/data_prep.PNG"  height=300>    
+</p>
 
 ### 2. Análisis Exploratorio de Datos (EDA)
 Con la data debidamente preparada, se realizó un análisis sobre todas las variables significativas para encontrar tendencias y patrones relevantes. A partir de estos insights se extrajeron la conclusiones y recomendaciones pertinentes. 
 Se confeccionó un informe escrito sobre los resultados obtenidos, tanto en formato pdf como md.  
+Esta etapa se implementó en el notebook [2_EDA.ipynb](etapas/2_EDA.ipynb).
 
-A continuacion se muestra la organizacion general del EDA (archivo `'./src/eda.png'`)
+A continuacion se muestra la organizacion general de las tareas:
 
-### 3. Dashboard
-En base a los resultados obtenidos en el analisis exploratorio de datos se elaboro un reporte interactivo con indicadores claves de desempeño  
+<p align="left">  
+    <img src="./src/eda.PNG"  height=300>
+</p>
 
-A continuación se presentan los KPIs propuestos y sus métricas asociadas:
+### 3. Elaboracion de los Entregables para el Cliente
+En base a los resultados obtenidos en el analisis exploratorio de datos se elaboro un reporte interactivo con los siguientes indicadores claves de desempeño:
 
-KPI 1: Aumentar las reseñas de usuarios nuevos en un 10% con respecto al año anterior  
-KPI 2: Aumentar la cantidad de restaurantes nuevos reseñados en un 5% con respecto al año anterior  
-KPI 3: Aumentar la cantidad de reseñas por restaurante en un 10% anual con respecto al año anterior  
-KPI 5: Aumentar el promedio de calificaciones de los restaurantes en un 5% con respecto al año anterior  
-KPI 6: Reducir en un 10% la cantidad de restaurantes de los que obtuvo reseñas negativas con respecto al año anterior
+KPI 1: Reducción en un 10% la tasa de victimas fatales en siniestros viales en CABA, respecto del semestre anterior.
+KPI 2: Reducción en un 7% la cantidad de accidentes mortales de motociclistas en CABA en el último año, respecto al año anterior.
+KPI 3: Reducción en un 5% la tasa de victimas fatales de peatones en accidentes viales en CABA, respecto al año anterior.  
 
-Obs: Al inicio en todos los notebooks se debieron importar las librerias y cargar el(los) dataset(s) correspondiente(s).
+A continuacon se muestra un screenshot del dashboard elaborado:
 
-<br>
+<p align="center">  
+    <img src="./src/dashboard.PNG"  height=300>
+</p>
+  
+Además del dashboard, se elaboro un informe escrito en formato PDF sobre los hallazgos del trabajo, que comprende los insights encontrados, las conclusiones sacadas a partir de dichos insights y las recomendaciones y sugerencias.
+Este informe tiene una version en formato MD para agilizar su lectura.
+
+
 
 <span style="float:right;">[arriba](#tabla-de-contenido)</span> 
+
+Definimos a la tasa de homicidios en siniestros viales como el número de víctimas fatales en accidentes de tránsito por cada 100,000 habitantes en un área geográfica durante un período de tiempo específico. Su fórmula es: (Número de homicidios en siniestros viales / Población total) * 100,000
+
+Definimos a la cantidad de accidentes mortales de motociclistas en siniestros viales como el número absoluto de accidentes fatales en los que estuvieron involucradas víctimas que viajaban en moto en un determinado periodo temporal. Su fórmula para medir la evolución de los accidentes mortales con víctimas en moto es: (Número de accidentes mortales con víctimas en moto en el año anterior - Número de accidentes mortales con víctimas en moto en el año actual) / (Número de accidentes mortales con víctimas en moto en el año anterior) * 100
+
+KPI 3: Reduc
+El tercer KPI tenía como objetivo reducir un 10% la tasa de víctimas fatales en accidentes de tránsito de peatones respecto al año anterior. Si tomamos el último año del análisis comprobamos que NO se cumplió, ya que la tasa AUMENTÓ en un 2.9%. Similar a lo explicado anteriormente, la abrupta baja en la tasa del 2020 explica que el 2021 no sea un año con baja en la tasa de víctimas fatales. Sin embargo, un análisis global nos indica que efectivamente la tasa sumada año tras año ofrece una baja total del 17%
+
+
 
 <br>
 
 ## 6. Gracias por su atención
-Te parecio interesante el proyecto? No olvides [regalarnos](https://github.com/pseeker33/Data_Analytics_Siniestros_Viales_en_Ciudad_de_Buenos_Aires/stargazers) una ⭐.  
+Te parecio interesante el proyecto? No olvides [regalarme](https://github.com/pseeker33/Data_Analytics_Siniestros_Viales_en_Ciudad_de_Buenos_Aires/stargazers) una ⭐.  
 Tienes una idea en mente o encontraste algun bug? Por favor abre un [issue](https://github.com/pseeker33/Data_Analytics_Siniestros_Viales_en_Ciudad_de_Buenos_Aires/issues) o inicia una [discusion](https://github.com/pseeker33/Data_Analytics_Siniestros_Viales_en_Ciudad_de_Buenos_Aires/discussions).  
 
 **Usa mis redes para contactarme:**  
