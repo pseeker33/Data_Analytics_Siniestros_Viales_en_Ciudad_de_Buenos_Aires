@@ -58,7 +58,7 @@ Tomando varias o todas la medidas antes mencionadas, corresponde a la Secretarí
 
 En cuanto al trabajo que nos concierne, el Observatorio de Movilidad y Seguridad Vial (OMSV),  centro de estudios que depende de dicha secretaria, nos encomendó la elaboración de un proyecto de análisis de datos para los siniestros viales en la Ciudad de Buenos Aires.  
 
-Para ello, nos disponibilizan un dataset sobre homicidios en siniestros viales acaecidos en la Ciudad de Buenos Aires durante el periodo 2016-2021.  
+Para ello, nos disponibilizan un dataset con datos sobre homicidios en siniestros viales acaecidos en la Ciudad de Buenos Aires durante el periodo 2016-2021.  
 
 Entonces nuestro objetivo es el de, a partir de dicha fuente de datos, y aplicando técnicas de preparacion, análisis y visualización interactiva de datos, generar y brindar a la OMSV de informacion significativa junto con las recomendaciones para cada caso, para ser usada como `una herramienta adicional de apoyo en la toma de decisiones` de las autoridades locales encargadas de adoptar las medidas necesarias para disminuir la cantidad de víctimas fatales en siniestros viales.
 
@@ -82,8 +82,9 @@ El repositorio contiene los siguientes elementos:
 * **`'EDA.ipynb'`**: implementación del analisis exploratorio de datos.
 
 **`Carpeta 'entregables'`**: contiene los productos finales para el uso del cliente.
-* **`'dashboard.pbix'`**: reporte interactivo con los KPIs formulados mas otras metricas y graficos relacionados
-* **`'reporte.pdf'`**: reporte con los hallazgos del trabajo
+* **`'dashboard.pbix'`**: reporte interactivo con los KPIs formulados mas otras metricas y graficos relacionados.
+* **`'informe.pdf'`**: informe con los hallazgos del trabajo.
+* **`'informe.md'`**: version web del informe anterior. 
 
 **`Carpeta 'data'`**: contiene el dataset crudo mas los dataframes creados a apartir de las implementaciones ya mencionadas.
 
@@ -110,7 +111,7 @@ El repositorio contiene los siguientes elementos:
 Para completar el proyecto se dividio el trabajo en tres etapas sucesivas: 
 
 ### 1. Data Preparation
-En esta primera etapa se preparó el dataset crudo de tal forma que en la etapa posterior pueda ser analizado sin inconvenientes. Para esto se aplicaron tareas de data cleaning como aplicar filtros, eliminar duplicados, corregir errores. Luego de la limpieza de datos se realizaron tareas básicas de data transformation para convertir el dataset a un formato fácilmente analizable. Dichas tareas incluyeron la normalizacion de tipos de datos y la eliminacion de campos innecesarios. 
+En esta primera etapa se preparó el dataset crudo de tal forma que en la etapa posterior pueda ser analizado sin inconvenientes. Para esto se aplicaron tareas de data cleaning como aplicar filtros, eliminar duplicados, corregir errores.  Luego de la limpieza de datos se realizaron tareas básicas de data transformation para convertir el dataset a un formato fácilmente analizable. Dichas tareas incluyeron la normalizacion de tipos de datos y la eliminacion de campos innecesarios.  
 Esta etapa se implementó en el notebook [1_data_preparation.ipynb](etapas/1_data_preparation.ipynb).  
 A continuacion se muestra la organizacion general de las tareas: 
 
@@ -119,8 +120,7 @@ A continuacion se muestra la organizacion general de las tareas:
 </p>
 
 ### 2. Análisis Exploratorio de Datos (EDA)
-Con la data debidamente preparada, se realizó un análisis sobre todas las variables significativas para encontrar tendencias y patrones relevantes. A partir de estos insights se extrajeron la conclusiones y recomendaciones pertinentes. 
-Se confeccionó un informe escrito sobre los resultados obtenidos, tanto en formato pdf como md.  
+Con la data debidamente preparada, se realizó un análisis sobre todas las variables significativas para encontrar tendencias y patrones relevantes. A partir de estos insights se extrajeron la conclusiones y recomendaciones pertinentes.  
 Esta etapa se implementó en el notebook [2_EDA.ipynb](etapas/2_EDA.ipynb).
 
 A continuacion se muestra la organizacion general de las tareas:
@@ -133,14 +133,16 @@ A continuacion se muestra la organizacion general de las tareas:
 En base a los resultados obtenidos en el analisis exploratorio de datos se elaboro un reporte interactivo con los siguientes indicadores claves de desempeño:
 
 KPI 1: Reducción en un 10% la tasa de victimas fatales en siniestros viales en CABA, respecto del semestre anterior.
-KPI 2: Reducción en un 7% la cantidad de accidentes mortales de motociclistas en CABA en el último año, respecto al año anterior.
+KPI 2: Reducción en un 7% la cantidad de accidentes mortales de motociclistas en CABA en el último año, respecto al año anterior.  
 KPI 3: Reducción en un 5% la tasa de victimas fatales de peatones en accidentes viales en CABA, respecto al año anterior.  
 
 A continuacon se muestra un screenshot del dashboard elaborado:
 
 <p align="center">  
-    <img src="./src/dashboard.PNG"  height=300>
+    <img src="./src/dashboard.PNG"  height=350>
 </p>
+
+<br>
   
 Además del dashboard, se elaboro un informe escrito en formato PDF sobre los hallazgos del trabajo, que comprende los insights encontrados, las conclusiones sacadas a partir de dichos insights y las recomendaciones y sugerencias.
 Este informe tiene una version en formato MD para agilizar su lectura.
@@ -148,15 +150,6 @@ Este informe tiene una version en formato MD para agilizar su lectura.
 
 
 <span style="float:right;">[arriba](#tabla-de-contenido)</span> 
-
-Definimos a la tasa de homicidios en siniestros viales como el número de víctimas fatales en accidentes de tránsito por cada 100,000 habitantes en un área geográfica durante un período de tiempo específico. Su fórmula es: (Número de homicidios en siniestros viales / Población total) * 100,000
-
-Definimos a la cantidad de accidentes mortales de motociclistas en siniestros viales como el número absoluto de accidentes fatales en los que estuvieron involucradas víctimas que viajaban en moto en un determinado periodo temporal. Su fórmula para medir la evolución de los accidentes mortales con víctimas en moto es: (Número de accidentes mortales con víctimas en moto en el año anterior - Número de accidentes mortales con víctimas en moto en el año actual) / (Número de accidentes mortales con víctimas en moto en el año anterior) * 100
-
-KPI 3: Reduc
-El tercer KPI tenía como objetivo reducir un 10% la tasa de víctimas fatales en accidentes de tránsito de peatones respecto al año anterior. Si tomamos el último año del análisis comprobamos que NO se cumplió, ya que la tasa AUMENTÓ en un 2.9%. Similar a lo explicado anteriormente, la abrupta baja en la tasa del 2020 explica que el 2021 no sea un año con baja en la tasa de víctimas fatales. Sin embargo, un análisis global nos indica que efectivamente la tasa sumada año tras año ofrece una baja total del 17%
-
-
 
 <br>
 
