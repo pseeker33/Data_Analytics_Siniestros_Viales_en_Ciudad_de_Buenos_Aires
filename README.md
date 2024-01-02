@@ -70,7 +70,7 @@ Entonces nuestro objetivo es el de, a partir de dicha fuente de datos, y aplican
 
 <br>
 <p align="left">  
-    <img src="./src/estructura_repo.png"  height=350>    
+    <img src="./src/estructura_repo.PNG"  height=350>    
 </p>
 
 <br>
@@ -130,22 +130,28 @@ A continuacion se muestra la organizacion general de las tareas:
 </p>
 
 ### 3. Elaboracion de los Entregables para el Cliente
+
+<u>__Dashboard con KPIs__</u>  
+
 En base a los resultados obtenidos en el analisis exploratorio de datos se elaboro un reporte interactivo con los siguientes indicadores claves de desempeño:
 
-KPI 1: Reducción en un 10% la tasa de victimas fatales en siniestros viales en CABA, respecto del semestre anterior.
-KPI 2: Reducción en un 7% la cantidad de accidentes mortales de motociclistas en CABA en el último año, respecto al año anterior.  
-KPI 3: Reducción en un 5% la tasa de victimas fatales de peatones en accidentes viales en CABA, respecto al año anterior.  
+KPI 1: Reducción en un 10% la tasa de victimas fatales en siniestros viales en CABA, respecto del semestre anterior.  
+KPI 2: Reducción en un 7% la tasa de victimas fatales de motociclistas en CABA en el último año, respecto del año anterior.  
+KPI 3: Reducción en un 10% la tasa de victimas fatales de peatones en accidentes viales en CABA, respecto del año anterior.  
 
 A continuacon se muestra un screenshot del dashboard elaborado:
 
 <p align="center">  
-    <img src="./src/dashboard.PNG"  height=350>
+    <img src="./src/dashboard.PNG"  height=500>
 </p>
 
 <br>
-  
-Además del dashboard, se elaboro un informe escrito en formato PDF sobre los hallazgos del trabajo, que comprende los insights encontrados, las conclusiones sacadas a partir de dichos insights y las recomendaciones y sugerencias.
-Este informe tiene una version en formato MD para agilizar su lectura.
+
+<u>__Informe de Hallazgos__</u>
+
+Además del dashboard, se elaboro un informe escrito en formato PDF sobre los hallazgos del trabajo.  
+Este informe comprende los insights encontrados, las conclusiones sacadas a partir de dichos insights y las recomendaciones y sugerencias.  
+Este informe tiene una version en formato MD llamado [informe_hallazgos.md](entregables/informe_hallazgos.md) para agilizar su lectura.
 
 
 
