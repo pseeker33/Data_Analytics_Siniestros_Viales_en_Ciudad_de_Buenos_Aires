@@ -7,7 +7,7 @@
 
 1. <span style="font-size: 1.2em;">**[Report Context](#report-context)**</span>
 
-2. <span style="font-size: 1.2em;">**[Insights Founded](#summary-of-insights-found)**</span>
+2. <span style="font-size: 1.2em;">**[Insights Found](#summary-of-insights-found)**</span>
 
 3. <span style="font-size: 1.2em;">**[Conclusions and Recommendations](#conclusions-and-recommendations)**</span>
 
