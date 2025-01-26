@@ -12,7 +12,8 @@
 <hr>
 <br>
 
-[Read this in Spanish / Lea este archivo en español](README-es.md)
+Read this in [Spanish](README-es.md) / Lea este archivo en [español](README-es.md)  
+Or check out the insights and final recomendations in [here](deliverables/findings-report.md)
 
 <br>
 

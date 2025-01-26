@@ -12,6 +12,9 @@
 <hr> 
 <br>
 
+ Lea este archivo en [ingles](README-es.md) / Read this in [English](README.md)  
+Or revisa los insights y recomendaciones finales [aquí](deliverables/findings-report.md)
+
 <br>
 
 ## Tabla de Contenido
